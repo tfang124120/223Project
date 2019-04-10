@@ -32,12 +32,15 @@
 #define WRITE  1  /* const int EOF = -1; */
 
 int  peekc, lastc, given, ninbuf, io, pflag;
-int  bufp = 0;  int  vflag  = 1, oflag, listf, listn, col, tfile  = -1, tline, iblock  = -1, oblock  = -1, ichanged, nleft;
+int  bufp = 0;  
+int  vflag  = 1, oflag, listf, listn, col, tfile  = -1, tline, iblock  = -1, oblock  = -1, ichanged, nleft;
 int  names[26], anymarks, nbra, subnewa, subolda, fchange, wrapp, bpagesize = 20;
-unsigned nlall = 128;  unsigned int  *addr1, *addr2, *dot, *dol, *zero;
+unsigned nlall = 128;  
+unsigned int  *addr1, *addr2, *dot, *dol, *zero;
 
 long  count;
-char  buf[BUFSIZE];  char  Q[] = "", T[] = "TMP", savedfile[FNSIZE], file[FNSIZE], linebuf[LBSIZE], rhsbuf[LBSIZE/2], expbuf[ESIZE+4];
+char  buf[BUFSIZE];  
+char  Q[] = "", T[] = "TMP", savedfile[FNSIZE], file[FNSIZE], linebuf[LBSIZE], rhsbuf[LBSIZE/2], expbuf[ESIZE+4];
 char  genbuf[LBSIZE], *nextip, *linebp, *globp, *mkdtemp(char *), tmpXXXXX[50] = "/tmp/eXXXXX";
 char  *tfname, *loc1, *loc2, ibuff[BLKSIZE], obuff[BLKSIZE], WRERR[]  = "WRITE ERROR", *braslist[NBRA], *braelist[NBRA];
 char  line[70];  char  *linp  = line;
